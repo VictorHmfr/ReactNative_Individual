@@ -30,7 +30,6 @@ export const botao = StyleSheet.create({
     },
 
     textStyle: {
-      fontFamily: 'Salmond Typeface',
       fontSize: 25,
       color: 'white',
     }

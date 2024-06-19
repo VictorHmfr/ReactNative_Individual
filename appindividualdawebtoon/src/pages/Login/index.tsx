@@ -7,16 +7,20 @@ import Logo from '../../assets/Logo.svg.png'
 
 export function Login() {
 
-  const [email, setEmail] = useState<string>('');
+  const [user, setUser] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
   const handleLogin = () => {
+    if (user === '' || password === ''){
+      alert("Usuário ou senha inválidos!")
+    } else {
     alert("Logado com sucesso!")
+    }
   }
 
-  const handleEmail = (value: string) => {
-    setEmail(value)
-    console.log('Valor do email: ' + value)
+  const handleUser = (value: string) => {
+    setUser(value)
+    console.log('Valor do usuário: ' + value)
   }
 
   const handlePassword = (value: string) => {
@@ -31,18 +35,18 @@ export function Login() {
         source={Logo}
         style={{
           width: '53%',
-          height: '25.8%',
+          height: '26.5%',
         }} />
         <Text style={webtoon.title}>Spotify</Text>
         <TextInputComponent
-          recebendoFuncao={handleEmail}
-          recebendoValue={email}
-          recebendoPlaceHolder="Digite seu email..."
+          recebendoFuncao={handleUser}
+          recebendoValue={user}
+          recebendoPlaceHolder="Username"
         />
         <TextInputComponent
           recebendoFuncao={handlePassword}
           recebendoValue={password}
-          recebendoPlaceHolder="Digite sua senha..."
+          recebendoPlaceHolder="Password"
           recebendoTipoDoInput={true}
         />
         <Button title={"Entrar"} recebendoFuncao={handleLogin}/>

@@ -6,12 +6,14 @@ export const webtoon = StyleSheet.create({
     backgroundColor: '#2E2F33',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 20,
+    gap: 25,
+    paddingBottom: 20
+
   },
 
   title: {
-    fontSize: 30,
+    fontSize: 40,
     textAlign: 'center',
-
+    color: 'white',
   },
 });
